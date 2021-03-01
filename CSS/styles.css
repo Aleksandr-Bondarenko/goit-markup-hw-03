@@ -1,0 +1,225 @@
+:root {
+  /* Шрифты */
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Фоны */
+  --primary-bgc: #ffffff;
+  --footer-bgc: #2f303a;
+  /* Фон кнопок фильтра и фон секции команды*/
+  --secondary-bgc: #f5f4fa;
+
+  /* Заголовки h2-h3, текст кнопок фильтра, текст навигации в шапке */
+  --main-title-color: #212121;
+
+  /* Основной текст, контакты в шапке */
+  --paragraph-color: #757575;
+
+  /* Цвета логотипа */
+  --primary-part-logo-color: #2196f3;
+  --header-part-logo-color: #000000;
+  --footer-part-logo-color: #ffffff;
+
+  /* Состояние активности: ссылки (текст), кнопки фильтра (фон) */
+  --action-color: #2196f3;
+
+  /* Фон кнопки героя при наведении */
+  --hero-btn-action-bgc: #188ce8;
+
+  /* Почта и телефон в подвале */
+  --fotter-contacts-color: rgba(255, 255, 255, 0.6);
+
+  /* Рамка карточек проектов в портфолио */
+  --project-border-color: #eeeeee;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--primary-bgc);
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* ===========ЛОГО============= */
+.logo {
+  font-family: var(--secondary-font);
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #2196f3;
+}
+
+.logo-header-part {
+  color: #000000;
+}
+
+.logo-footer-part {
+  color: #ffffff;
+}
+/* =============КОНЕЦ ЛОГО============== */
+
+/* ===============ШАПКА========================= */
+.site-nav .link,
+.header-contacts .link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.header-contacts .link {
+  color: #757575;
+}
+
+.action:hover,
+.action:focus {
+  color: var(--action-color);
+}
+
+.site-nav .current {
+  color: var(--action-color);
+}
+/* ===================КОНЕЦ ШАПКИ================== */
+
+/* =================ГЕРОЙ===================== */
+.hero {
+  background-color: var(--footer-bgc);
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.hero-btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2196f3;
+  cursor: pointer;
+}
+
+.action-btn:hover,
+.action-btn:focus {
+  background-color: var(--hero-btn-action-bgc);
+}
+/* ===============КОНЕЦ ГЕРОЯ=================== */
+
+/* ================ПРЕИМУЩЕСТВА================ */
+.advantages-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+
+.advantages-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--paragraph-color);
+}
+/* ==============КОНЕЦ ПРЕИМУЩЕСТВА=============== */
+
+/* ============ВОЗМОЖНОСТИ и КОМАНДА==============*/
+.abilities-title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.team {
+  background-color: var(--secondary-bgc);
+}
+
+.team-member,
+.team-member-profesion {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  /* text-align: center; */
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+
+.team-member-profesion {
+  font-weight: 400;
+  color: var(--paragraph-color);
+}
+/* КОНЕЦ ВОЗМОЖНОСТИ и КОМАНДА */
+
+/* ПОРТФОЛИО */
+.filter-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  background-color: var(--secondary-bgc);
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: #ffffff;
+  background-color: var(--action-color);
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 0.2;
+  letter-spacing: 0.06em;
+  color: var(--main-title-color);
+}
+
+.project-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--paragraph-color);
+}
+/* КОНЕЦ ПОРТФОЛИО */
+
+/* ПОДВАЛ */
+.footer {
+  background-color: var(--footer-bgc);
+}
+.address {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.address .link {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* КОНЕЦ ПОДВАЛА */
