@@ -1,4 +1,10 @@
 :root {
+  /* Паддинги секций */
+  --section-pdg: 94px;
+
+  /* Основной зазор */
+  --primary-gap: 30px;
+
   /* Шрифты */
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
@@ -38,6 +44,26 @@ body {
   background-color: var(--primary-bgc);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
@@ -46,8 +72,17 @@ body {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  /* background-color: burlywood; */
+}
+
 /* ===========ЛОГО============= */
 .logo {
+  margin-right: 93px;
   font-family: var(--secondary-font);
   font-size: 26px;
   line-height: 1.2;
@@ -66,6 +101,10 @@ body {
 /* =============КОНЕЦ ЛОГО============== */
 
 /* ===============ШАПКА========================= */
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
 .site-nav .link,
 .header-contacts .link {
   font-weight: 500;
@@ -73,6 +112,10 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+.header .link {
+  padding: 24px 0;
 }
 
 .header-contacts .link {
@@ -87,31 +130,59 @@ body {
 .site-nav .current {
   color: var(--action-color);
 }
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav .list {
+  display: flex;
+  width: 294px;
+  justify-content: space-between;
+}
+
+.header-contacts {
+  display: flex;
+  width: 307px;
+  margin-left: auto;
+  justify-content: space-between;
+}
+
 /* ===================КОНЕЦ ШАПКИ================== */
 
 /* =================ГЕРОЙ===================== */
 .hero {
+  padding: 200px 0;
+
   background-color: var(--footer-bgc);
+  text-align: center;
 }
 
 .hero-title {
+  margin: 0 auto;
+  width: 696px;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
-  line-height: 1.36;
+  line-height: 1.363636363636364;
   text-transform: uppercase;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
 }
 
 .hero-btn {
+  min-width: 200px;
+  padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.875;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
+  border: transparent;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -122,10 +193,27 @@ body {
 /* ===============КОНЕЦ ГЕРОЯ=================== */
 
 /* ================ПРЕИМУЩЕСТВА================ */
+.advantages {
+  padding: var(--section-pdg) 0;
+}
+
+/* Скрытый заголовок секции */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6 IE7 */
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
 .advantages-title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.1721;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-title-color);
@@ -134,25 +222,64 @@ body {
 .advantages-text {
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.714285714285714;
+  /* line-height: 1.8; */
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
 }
+
+.advantages .list {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-left: -30px;
+  margin-top: -30px; */
+}
+
+.advantages-item {
+  /* margin-left: 30px;
+  margin-top: 30px; */
+  flex-basis: calc((100% - 90px) / 4);
+  margin-right: var(--primary-gap);
+}
+
+.advantages-item:last-child {
+  margin-right: 0;
+}
+
 /* ==============КОНЕЦ ПРЕИМУЩЕСТВА=============== */
 
 /* ============ВОЗМОЖНОСТИ и КОМАНДА==============*/
 .abilities-title,
 .team-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
 }
 
+.abilities {
+  padding: var(--section-pdg) 0;
+}
+
+.abilities-list {
+  display: flex;
+}
+
+.abilities-item {
+  margin-right: var(--primary-gap);
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.abilities-item:last-child {
+  margin-right: 0;
+}
+
 .team {
   background-color: var(--secondary-bgc);
+  padding: var(--section-pdg) 0;
 }
 
 .team-member,
@@ -160,7 +287,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  /* text-align: center; */
+  text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
 }
@@ -169,6 +296,32 @@ body {
   font-weight: 400;
   color: var(--paragraph-color);
 }
+
+.team-title {
+  margin-bottom: 50px;
+}
+
+.team .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--primary-gap));
+  margin-left: calc(-1 * var(--primary-gap));
+}
+
+.team-item {
+  margin-top: var(--primary-gap);
+  margin-left: var(--primary-gap);
+  flex-basis: calc((100% - 120px) / 4);
+}
+
+.team-item-thumb {
+  padding: 30px 0;
+}
+
+.team-member {
+  margin-bottom: 10px;
+}
+
 /* КОНЕЦ ВОЗМОЖНОСТИ и КОМАНДА */
 
 /* ПОРТФОЛИО */
@@ -209,7 +362,24 @@ body {
 /* ПОДВАЛ */
 .footer {
   background-color: var(--footer-bgc);
+  padding: 60px 0;
+  /* display: flex; */
 }
+
+.footer .logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.address-text,
+.footer-contacts .item {
+  margin-bottom: 9px;
+}
+
+.footer-contacts .item:last-child {
+  margin-bottom: 0px;
+}
+
 .address {
   font-weight: 400;
   font-style: normal;
