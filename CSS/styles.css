@@ -100,6 +100,12 @@ img {
 .logo-footer-part {
   color: #ffffff;
 }
+
+.footer .logo {
+  padding: 0;
+  margin-right: 0;
+}
+
 /* =============КОНЕЦ ЛОГО============== */
 
 /* ===============ШАПКА========================= */
@@ -111,9 +117,12 @@ img {
   display: block;
 }
 
+.site-nav .link {
+  padding: 32px 0;
+}
+
 .site-nav .link,
 .header-contacts .link {
-  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -141,15 +150,16 @@ img {
 
 .site-nav .list {
   display: flex;
-  min-width: 294px;
-  justify-content: space-between;
+}
+
+.header .list-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-contacts {
   display: flex;
-  min-width: 307px;
   margin-left: auto;
-  justify-content: space-between;
+  align-items: center;
 }
 
 /* ===================КОНЕЦ ШАПКИ================== */
@@ -258,21 +268,21 @@ img {
 }
 
 .abilities {
-  padding: var(--section-pdg) 0;
+  padding: 0 0 var(--section-pdg);
 }
 
 .abilities-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: calc(-1 * var(--primary-gap));
+  margin-left: calc(-1 * var(--primary-gap));
 }
 
 .abilities-item {
+  margin-top: var(--primary-gap);
+  margin-left: var(--primary-gap);
   flex-basis: calc(100% / 3 - var(--primary-gap));
-}
-
-.abilities-item:not(:last-child) {
-  margin-right: var(--primary-gap);
 }
 
 .team {
@@ -350,7 +360,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--main-title-color);
   margin-bottom: 4px;
 }
@@ -358,7 +368,7 @@ img {
 .project-text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.87;
+  line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
 }
@@ -383,6 +393,10 @@ img {
   margin-right: 8px;
 }
 
+.projects .link {
+  display: block;
+}
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
@@ -398,7 +412,7 @@ img {
 }
 
 .projects-item-thumb {
-  padding: 20px 24px;
+  padding: 20px 23px 19px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
@@ -429,7 +443,7 @@ img {
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: #ffffff;
 }
